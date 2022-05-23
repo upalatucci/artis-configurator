@@ -1,10 +1,19 @@
 import { useState } from "react";
+import bluImage from "../assets/blu.jpg";
+import neroImage from "../assets/nero.jpg";
+import verdeImage from "../assets/verde.jpg";
 
 enum ASSETS {
   BLU = "blu",
   NERO = "nero",
   VERDE = "verde",
 }
+
+const getAssetFromColor = {
+  [ASSETS.BLU]: bluImage,
+  [ASSETS.NERO]: neroImage,
+  [ASSETS.VERDE]: verdeImage,
+};
 
 function App() {
   const [color, setColor] = useState(ASSETS.BLU);
@@ -17,7 +26,7 @@ function App() {
             <button onClick={() => setColor(asset)}>{asset}</button>
           ))}
         </p>
-        <img src={`../assets/${color}.jpg`} alt={color} />
+        <img src={getAssetFromColor[color]} alt={color} />
       </body>
     </div>
   );
