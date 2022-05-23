@@ -21,6 +21,10 @@ img {
   width: 100%;
 }
 
-button {
-  
+.buttons {
+  display: flex;
+  flex-direction: column;
+  padding-right: 30px;
+  justify-content: space-evenly;
+  height: 300px;
 }

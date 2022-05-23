@@ -21,11 +21,11 @@ function App() {
   return (
     <div className="App">
       <body>
-        <p>
+        <div className="buttons">
           {Object.values(ASSETS).map((asset) => (
             <button onClick={() => setColor(asset)}>{asset}</button>
           ))}
-        </p>
+        </div>
         <img src={getAssetFromColor[color]} alt={color} />
       </body>
     </div>
