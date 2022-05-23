@@ -14,17 +14,92 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+
 }
 
-img {
+
+@media only screen and (min-width: 780px) {
+  body {
+    flex-direction: row;
+  }
+}
+
+.main-image {
+  height: 100%;
+  width: 100%;
+  max-width: 80vw;
+  max-height: 80vh;
+}
+
+.main-image img {
   height: 100%;
   width: 100%;
 }
 
 .buttons {
   display: flex;
-  flex-direction: column;
-  padding-right: 30px;
+  flex-direction: row;
+  align-items: stretch;
   justify-content: space-evenly;
-  height: 300px;
+  padding: 30px;
+}
+
+
+@media only screen and (max-width: 780px) {
+  .buttons {
+    width: 300px;
+  }
+}
+
+
+@media only screen and (min-width: 780px) {
+  .buttons {
+    flex-direction: column;
+    height: 300px;
+  }
+}
+
+
+button {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 8px;
+  border-radius: 10px;
+  margin: 4px;
+}
+
+button img {
+  padding-left: 10px;
+  height: 20px;
+  width: 20px;
+}
+
+
+@media only screen and (min-width: 340px) {
+  button {
+    margin: 8px;
+  }
+ 
+  button img {
+    height: 30px;
+    width: 30px;
+  }
+}
+
+
+@media only screen and (min-width: 400px) {
+  button img {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+@media only screen and (min-width: 780px) {
+  button img {
+    height: 80px;
+    width: 80px;
+  }
 }
